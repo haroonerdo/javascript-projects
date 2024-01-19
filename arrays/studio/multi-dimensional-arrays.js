@@ -30,11 +30,8 @@ console.log(arrCargoHold);
 //3) Query the user to select a cabinet (0 - 3) in the cargoHold.
 
 const input = require('readline-sync');
-let question="Could you please choose a cabinet number (0-3)in the cargo hold?: ";
 let cabinetNo=""; //answer will be change cabinetNo
-
-cabinetNo=input.question("Which cabinet do you want to look : ")
-
+cabinetNo=input.question("Could you please choose a cabinet number (0-3)in the cargo hold?:\nWhich cabinet do you want to look : ")
 
 //4) Use bracket notation and a template literal to display the contents of 
 //the selected cabinet. If the user entered an invalid number, print an error message.
@@ -56,13 +53,10 @@ if((cabinetNo>=0)&&(cabinetNo<=3)){
     if(arrCargoHold[i].includes(item)){
        console.log("cabinet number "+i+" DOES contain "+item+" .") 
        console.log(arrCargoHold[i]) 
-    }if else{
+    } else {
         console.log("cabinet number "+i+" DOES NOT contain "+item+" .")
-    }else{
-        console.log()
     }
     }
-
 //bellow part for check
 /*
     let i=0;
