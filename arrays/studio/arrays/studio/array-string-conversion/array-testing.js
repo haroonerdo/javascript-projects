@@ -47,7 +47,7 @@ function commaSpace() {
 	let output;
 	//TODO: write the code required for this step
     if (check.includes(', ')){
-        output=check.split(', ').sort().reverse().join(',');
+        output=check.split(', ').sort().join(',');
         }
 	return output;
 }
