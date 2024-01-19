@@ -36,7 +36,7 @@ function reverseSpaces() {
 	let output;
   //TODO: write the code required for this step
 if (check.includes(' ')){
-    output=check.split(' ').reverse().join(' ');
+    output=check.split(' ').sort().reverse().join(' ');
     }
 	return output;
 }
@@ -47,7 +47,7 @@ function commaSpace() {
 	let output;
 	//TODO: write the code required for this step
     if (check.includes(', ')){
-        output=check.split(', ').sort().join(',');
+        output=check.split(', ').reverse().join(',');
         }
 	return output;
 }
