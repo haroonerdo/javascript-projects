@@ -20,7 +20,7 @@ function reverseCommas() {
 
 //3)
 function semiDash() {
-	let check=tsrings[1];
+	let check=strings[1];
 	let output;
 //TODO: write the code required for this step
 if (check.includes(';')){
@@ -32,7 +32,7 @@ if (check.includes(';')){
 
 //4)
 function reverseSpaces() {
-	let check=tsrings[2];
+	let check=strings[2];
 	let output;
   //TODO: write the code required for this step
 if (check.includes(' ')){
@@ -43,7 +43,7 @@ if (check.includes(' ')){
 
 //5)
 function commaSpace() {
-	let check=tsrings[3];
+	let check=strings[3];
 	let output;
 	//TODO: write the code required for this step
     if (check.includes(', ')){
