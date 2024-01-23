@@ -71,16 +71,24 @@ console.log(newStr)
   b. Print the arrays to confirm the results. */
 
   let arrMain=[2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
-  let arrOdd=[];
-  let arrEven=[];
+  let arrOdds=[];
+  let arrEvens=[];
 
-  for (let i=0;i<arrMain.length; i++){
-    if(arrMain[i]%2==0){
-      arrEven.push(arrMain[i])
+  // for (let i=0;i<arrMain.length; i++){
+  //   if(arrMain[i]%2==0){
+  //     arrEvens.push(arrMain[i])
+  //   }else{
+
+  //     arrOdds.push(arrMain[i])
+  //   }
+  // }
+
+  arrMain.forEach((element)=>{
+    if(element%2==2){
+      arrEvens.push(element)
     }else{
-
-      arrOdd.push(arrMain[i])
+      arrOdds.push(element)
     }
-  }
-  console.log(`Even number array is ${arrEven} .`)
-  console.log(`Odd number array is ${arrOdd} .`)
+  })
+  console.log(`Even number array is ${arrEvens} .`)
+  console.log(`Odd number array is ${arrOdds} .`)
