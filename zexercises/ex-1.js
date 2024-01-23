@@ -15,9 +15,9 @@ let desserts = ['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi'
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
 for (let i=0; i<6; i++){
     for (let j=0; j<pantry.length; j++){
-        meals[i]=((protein[i]), (grains[i]), (veggies[i]), (beverages[i]), (desserts[i]))
+        //meals[i]=((protein[i]), (grains[i]), (veggies[i]), (beverages[i]), (desserts[i]))
         console.log(pantry[j][i])
-      }console.log(meals[i])
+      }//console.log(meals[i])
   }
 console.log(meals)
   //return meals;
