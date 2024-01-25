@@ -7,4 +7,5 @@ function printMessage() {
 printMessage();
 message = "Goodbye";
 printMessage();
-
+message = "goodmorning";
+printMessage();

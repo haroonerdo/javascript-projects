@@ -9,6 +9,29 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+
+    function reverseCharacters(string){
+        let stringToArray=[];
+        let arrayToReverse=[];
+        let reverseToString='';
+        stringToArray = string.split('');
+        arrayToSort=stringToArray.sort();
+        arrayToReverse=arrayToSort.reverse();
+        reverseToString=arrayToReverse.join('');
+        return reverseToString;
+}       
+        console.log (reverseCharacters('LaunchCode'));
+
+        function reverseCharacters(string){
+            let arrayString=[];
+            arrayString = string.split('').sort().reverse().join('');
+            console.log(arrayString)
+            console.log(typeof arrayString)
+            return arrayString;
+        }
+        console.log (reverseCharacters('Hello World'));
+        
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -16,6 +39,15 @@
 // 3. If typeof is ’number’, convert the parameter to a string, reverse the characters, then convert it back into a number.
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
+    function reverseDigits(digits){
+            let arrayDigit=[];
+        arrayDigit = String(digits).split('').sort().reverse().join('');
+        arrayDigit=Number(arrayDigit);
+        //console.log(arrayDigit);
+        console.log(typeof arrayDigit);
+        return arrayDigit;
+    }
+    console.log(reverseDigits(46310));
 
 // Part Three: Complete Reversal
 
@@ -29,6 +61,50 @@
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+let emptyArray=[];
+let reversedArray=[];
+for(let i=0; i<arrayTest2.length; i++){
+    if(typeof arrayTest2[i]=="string"){
+       emptyArray[i]=arrayTest2[i].reverse;
+    }else{
+        emptyArray[i]=Number(String(arrayTest2[i]).reverse);
+    }
+}
+console.log(emptyArray);
+
+
+// console.log(arrayEmpty);
+// console.log(arrayEmpty.length);
+// console.log(arrayEmpty[1]);
+// console.log(arrayEmpty[1][1]);
+// console.log(arrayEmpty[1].length)
+// if((typeof arrayEmpty[1][1])==="string"){
+//     console.log(true)
+// }else {
+//     console.log(false)
+// }
+console.log('--------------------------');
+// function reversedArray(array){
+// for (let i=0; i<arrayEmpty.length; i++){
+//     for (let j=0; j<arrayEmpty[i].length;j++)
+//     if((typeof arrayEmpty[i][j])==="string"){
+//         (arrayReversed)+=(reverseCharacters(arrayEmpty[i][j]));
+//         //arrayReversed[i][j].push(arrayEmpty[i][j]).reverse().join('');
+//         console.log(arrayReversed);
+//     }else{
+        
+//         (arrayReversed[i][j])=(reverseDigits(arrayEmpty[i][j]));
+//         //arrayReversed[i][j].push(String(arrayEmpty[i][j])).reverse().join(''); 
+//         arrayReversed+=Number(arrayReversed[i][j]);
+//         //return arrayReversed;
+//         console.log(arrayReversed);  
+//     }
+//     }
+// }
+
+// reversedArray(arrayEmpty);
+console.log('--------------------------');
 
 // Bonus Missions
 
