@@ -10,26 +10,20 @@
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
 
-    function reverseCharacters(string){
-        let stringToArray=[];
-        let arrayToReverse=[];
-        let reverseToString='';
-        stringToArray = string.split('');
-        arrayToSort=stringToArray.sort();
-        arrayToReverse=arrayToSort.reverse();
-        reverseToString=arrayToReverse.join('');
-        return reverseToString;
-}       
-        console.log (reverseCharacters('LaunchCode'));
-
-        function reverseCharacters(string){
-            let arrayString=[];
-            arrayString = string.split('').sort().reverse().join('');
-            console.log(arrayString)
-            console.log(typeof arrayString)
-            return arrayString;
+        function reverseCharacters(str){
+            let reversedStr='';
+            if (typeof str==='string'){
+                reversedStr=str.split('').reverse().join('');
+            }else{
+                str=String(str);
+                reversedStr=str.split('').reverse().join('');
+                reversedStr=Number(reversedStr);
+                //console.log(typeof reversedStr);
+            }
+            return reversedStr;
         }
-        console.log (reverseCharacters('Hello World'));
+        let sampleString='LaunchCode';
+        console.log (reverseCharacters(sampleString));
         
 
 // Part Two: Reverse Digits
@@ -40,14 +34,16 @@
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
     function reverseDigits(digits){
-            let arrayDigit=[];
-        arrayDigit = String(digits).split('').sort().reverse().join('');
-        arrayDigit=Number(arrayDigit);
-        //console.log(arrayDigit);
-        console.log(typeof arrayDigit);
-        return arrayDigit;
+            let stringDigit=[];
+        stringDigit = String(digits).split('').reverse().join('');
+        console.log(stringDigit);
+        stringDigit=Number(stringDigit);
+        return stringDigit;
     }
-    console.log(reverseDigits(46310));
+    let sampleDigits=54321;
+    console.log(reverseDigits(sampleDigits));
+    console.log('If your number\'s last digit is zero ATTENTION!!! \nwhen number is in reverse first digit is zero. So, number length is reduce.\n');   
+    
 
 // Part Three: Complete Reversal
 
@@ -61,50 +57,19 @@
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+let emptyReversedArray=[];
 
-let emptyArray=[];
-let reversedArray=[];
-for(let i=0; i<arrayTest2.length; i++){
-    if(typeof arrayTest2[i]=="string"){
-       emptyArray[i]=arrayTest2[i].reverse;
-    }else{
-        emptyArray[i]=Number(String(arrayTest2[i]).reverse);
+
+function reverseArray(array){
+    for(let i=0; i<array.length; i++){    
+        emptyReversedArray.push(reverseCharacters(array[i]));
     }
+    emptyReversedArray.reverse();
+    return emptyReversedArray;
 }
-console.log(emptyArray);
+console.log(reverseArray(arrayTest2));
 
 
-// console.log(arrayEmpty);
-// console.log(arrayEmpty.length);
-// console.log(arrayEmpty[1]);
-// console.log(arrayEmpty[1][1]);
-// console.log(arrayEmpty[1].length)
-// if((typeof arrayEmpty[1][1])==="string"){
-//     console.log(true)
-// }else {
-//     console.log(false)
-// }
-console.log('--------------------------');
-// function reversedArray(array){
-// for (let i=0; i<arrayEmpty.length; i++){
-//     for (let j=0; j<arrayEmpty[i].length;j++)
-//     if((typeof arrayEmpty[i][j])==="string"){
-//         (arrayReversed)+=(reverseCharacters(arrayEmpty[i][j]));
-//         //arrayReversed[i][j].push(arrayEmpty[i][j]).reverse().join('');
-//         console.log(arrayReversed);
-//     }else{
-        
-//         (arrayReversed[i][j])=(reverseDigits(arrayEmpty[i][j]));
-//         //arrayReversed[i][j].push(String(arrayEmpty[i][j])).reverse().join(''); 
-//         arrayReversed+=Number(arrayReversed[i][j]);
-//         //return arrayReversed;
-//         console.log(arrayReversed);  
-//     }
-//     }
-// }
-
-// reversedArray(arrayEmpty);
-console.log('--------------------------');
 
 // Bonus Missions
 
@@ -112,11 +77,29 @@ console.log('--------------------------');
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
+sampleString='LaunchCode';
+function funPhrase(string){
+let str='';
+    if(string.length<=3){
+    str=string.slice(string.length-1)
+    return str
+    }else{
+        str=string.slice(0,3);
+        return str
+    }
+} 
+console.log(funPhrase(sampleString))
+
 
 // Test Function
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
+
+let testString='Functions rock!';
+console.log(funPhrase(testString))
+
+console.log("This is sample string \'"+funPhrase(sampleString)+"\' and this is test string \'"+ funPhrase(testString)+"\'");
 
 // Area of rectangle equal to length x width
 
@@ -125,3 +108,31 @@ console.log('--------------------------');
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+function areaOfRectangle(l, w){
+   let area;
+  
+   l=Number(l);
+   w=Number(w);
+    if (l != w){
+        area = l * w;
+        return area
+    }else{
+        return NaN
+    }
+    }
+
+function areaOfSquare(l,w){
+    let area;
+    l=Number(l);
+     if (l===w){
+         area=l * l;
+         return area
+     }else{
+         return NaN
+     }
+ }
+let l=4;
+let w=4;
+ console.log('The area is '+ areaOfRectangle(l,w) +' cm^2.');
+ console.log('The square area is '+ areaOfSquare(l,w) +' cm^2.');
