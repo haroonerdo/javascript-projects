@@ -1,5 +1,5 @@
 {
-   "name": "Array and String Conversion",
+   "name": "arrayconversion",
    "version": "1.0.0",
    "description": "intro to prof web dev studio: Arrays Keep Things in Order",
    "main": "grading.js",
