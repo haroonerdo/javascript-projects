@@ -95,6 +95,17 @@ function fitnessTest(candidates){
 
 // for(let i=0; i<crew.length; i++){
 //  console.log(fitnessTest(crew[i]));
-// }  
-console.log(fitnessTest(crew));
-console.log('-------------')
+// }
+  
+// console.log(fitnessTest(crew));
+
+
+fitnessTest(crew).map(result =>{
+   console.log(result);
+});
+fitnessTest(crew).forEach(result => {
+   console.log(result);
+});
+
+
+

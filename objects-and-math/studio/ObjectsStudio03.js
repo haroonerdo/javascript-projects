@@ -1,8 +1,12 @@
 // Code your crewMass function here:
+function crewMass(){
 
+}
 
 // Code your fuelRequired function here:
-
+function fuelRequired(){
+  
+}
 
 // The pre-selected crew is in the array at the end of this file.
 // Feel free to add, remove, or switch crew members as you see fit.

@@ -91,13 +91,13 @@ let giraffe = {
 // console.log(num10);//36
 
 // 
-console.log(Math.round(12.3456789)*10000/10000);
+// console.log(Math.round(12.3456789)*10000/10000);
 
-console.log(Math.round(12.3456789*100)/100);
+// console.log(Math.round(12.3456789*100)/100);
 
-console.log(Math.round(12.3456789)*100/100);
+// console.log(Math.round(12.3456789)*100/100);
 
-console.log(Math.round(12.3456789*10000)/10000);
+// console.log(Math.round(12.3456789*10000)/10000);
 
 
 
@@ -113,6 +113,22 @@ console.log(Math.round(12.3456789*10000)/10000);
 //     console.log(randomSelection(happiness));
 //  }
 
+const user={
+  details:{
+    name: "john",
+    age:23
+  }
+};
+console.log(user.details.name);
+console.log(user.details["name"]);
 
-
+const car={
+  brand: "toyota",
+  model: "camry",
+  year: 2024,
+  color: "silver"
+};
+for (const key in car) {
+  console.log(`${key}: ${car[key]}`)
+}
 
