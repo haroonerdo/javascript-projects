@@ -24,6 +24,42 @@ let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
+
+let nonSuspiciousFuel = function(a) {
+  if (checkFuel(a) === 'green') {
+     return a - 100001;
+  }
+  else if (checkFuel(a) === 'yellow') {
+     return a - 50001;
+  }
+  else {
+     return a;
+  }
+};
+
+let newCargoHold = [];
+let newCargo = ['meal kits', 'first-aid kit'];
+let outCargo = ['satellite', 'gold'];
+let nonSuspiciousCargo = function (neededCargo) {
+  if (newCargoHold.length === 2) {
+    return newCargoHold
+} else {
+    cargoHold.splice(cargoHold.indexOf(newCargo[0]), 1, outCargo[0]);
+    newCargoHold.push(newCargo[0]);
+    outCargo.shift();
+    newCargo.shift();
+    return nonSuspiciousCargo(neededCargo);
+}
+}
+console.log(nonSuspiciousCargo(neededCargo));
+
+let irs = function(fuelLevel, newCargo) {
+  let arr = nonSuspiciousCargo(newCargo);
+  return `Raided ${nonSuspiciousFuel(fuelLevel)} kg of fuel from the tanks, and stole ${arr[0]} and ${arr[1]} from the cargo hold.`
+}
+console.log(irs(fuelLevel,newCargo));
+
+
 /* Steal some fuel from the shuttle:
  * /
  
@@ -54,4 +90,3 @@ console.log("Hold status: " + holdStatus(cargoHold));
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
