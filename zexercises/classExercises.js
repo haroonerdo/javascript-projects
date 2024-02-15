@@ -1,8 +1,4 @@
 // Define your Book class here:
-// const input = require('readline-sync');
-// let currentYear=Number(input.question("enter the current year: "));
-
-// Define your Book class here:
 const input = require('readline-sync');
 
 class Book {
@@ -71,6 +67,3 @@ aNovel.dispose(2024,1);
 
 //console.log(makingTheShip);
 //console.log(aNovel);
-
- 
-
