@@ -66,6 +66,7 @@ let aNovel = new Novel('Pride and Prejudice', 'Jane Austen', 1813, '111111111111
 // console.log(makingTheShip);
 // console.log(aNovel);
 
+//dispose(currentYear,uses)
 makingTheShip.dispose(2024,5);
 aNovel.dispose(2024,1);
 
