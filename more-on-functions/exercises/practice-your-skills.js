@@ -5,14 +5,14 @@ a) If passed a number, return the tripled value.
 b) If passed a string, return the string “ARRR!”
 c) Be sure to test your function before moving on the next part. 
 */
-//let practice = function(myArg) {
-   function practice(myArg){
+let practice = function(myArg) {
     if (typeof myArg === "number") {
-       return myArg*3
-    }else if(typeof myValue === "string"){
-return "ARRR"
+      let newArg=myArg*3;
+      return newArg;
+    }else if(typeof myArg === "string"){
+      return "ARRR"
     }else{
-      return myArg
+      return myArg;
     }
  }
  
@@ -24,6 +24,8 @@ c) Print the new array to confirm your work.
 
 let arr = ['Elocution', 21, 'Clean teeth', 100];
 
-arr=arr.map((elem)=>{
-   return practice(elem)
+let newArr=arr.map((element)=>{
+   return practice(element)
 });
+
+console.log(newArr)
