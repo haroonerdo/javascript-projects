@@ -1,4 +1,4 @@
-const checkFive = require('./checkFive.js');
+const checkFive = require('../checkFive.js');
 
 describe("checkFive", function(){
 
